@@ -1,0 +1,5 @@
+python-bleak (16.0-0) unstable; urgency=medium
+
+   * Initial release.
+
+  -- Sebastien Laclau <seb.laclau@gmail.com>  Thu, 27 Apr 2023 00:19:00
