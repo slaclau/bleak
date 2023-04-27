@@ -31,7 +31,7 @@ jobs:
           name: Debian
           path: |
             python-bleak*.deb
-            python-bleakt*.dsc
+            python-bleak*.dsc
             python-bleak*.tar.xz
             python-bleak*.changes
       - name: Publish package to prerelease PPA
