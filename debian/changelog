@@ -1,3 +1,9 @@
+python-bleak (16.0-2) jammy; urgency=medium
+
+  * Use python3-all.
+
+ -- Sebastien Laclau <seb.laclau@gmail.com>  Thu, 27 Apr 2023 16:06:00 +0100
+
 python-bleak (16.0-1) jammy; urgency=medium
 
   * Add setuptools dependency.
