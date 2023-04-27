@@ -15,5 +15,27 @@ jobs:
           sudo apt update
           sudo apt install devscripts equivs
           sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes --no-install-recommends -y"
+      - name: Import key
+        run: |
+          GPG_KEY_ID=$(echo "${{ secrets.PPA_GPG_PRIVATE_KEY }}" | gpg --import-options show-only --import | sed -n '2s/^\s*//p')
+          echo $GPG_KEY_ID
+          echo "${{ secrets.PPA_GPG_PRIVATE_KEY }}" | gpg --batch --import
       - name: Build
-        run: dpkg-buildpackage 
+        run: |
+          dpkg-buildpackage -S -sa
+          dpkg-buildpackage -b
+          mv ../python-bleak_*.* .
+      - name: Upload debian package
+        uses: actions/upload-artifact@v3
+        with:
+          name: Debian
+          path: |
+            python-bleak*.deb
+            python-bleakt*.dsc
+            python-bleak*.tar.xz
+            python-bleak*.changes
+      - name: Publish package to prerelease PPA
+        run: |
+          sudo apt install dput
+          dput ppa:slaclau/ppa-pre python-bleak*source.changes
+        if: github.ref == 'refs/heads/master'
