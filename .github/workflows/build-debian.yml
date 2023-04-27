@@ -38,4 +38,4 @@ jobs:
         run: |
           sudo apt install dput
           dput ppa:slaclau/ppa-pre python-bleak*source.changes
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/release/16.0'
