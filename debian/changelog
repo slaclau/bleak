@@ -1,4 +1,4 @@
-python-bleak (16.0-0) unstable; urgency=medium
+python-bleak (16.0-0) jammy; urgency=medium
 
   * Initial release.
 
