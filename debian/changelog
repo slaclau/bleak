@@ -1,4 +1,4 @@
-python-bleak (16.0-4) jammy; urgency=medium
+python-bleak (16.0-4) replaceme; urgency=medium
 
   * Add python3-dbus-next.
 
