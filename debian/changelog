@@ -1,3 +1,9 @@
+python-bleak (16.0-4) jammy; urgency=medium
+
+  * Add python3-dbus-next.
+
+ -- Sebastien Laclau <seb.laclau@gmail.com>  Thu, 27 Apr 2023 17:38:00 +0100
+
 python-bleak (16.0-3) jammy; urgency=medium
 
   * Remove unneeded dependency.

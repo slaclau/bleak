@@ -11,7 +11,11 @@ Build-Depends:
 Package: python3-bleak
 Architecture: any
 Multi-Arch: allowed
-Depends: ${python3:Depends}, ${shlibs:Depends}, ${misc:Depends}
+Depends:
+ ${python3:Depends},
+ ${shlibs:Depends},
+ ${misc:Depends},
+ python3-dbus-next
 Recommends: ${python3:Recommends},
 Suggests: ${python3:Suggests},
 Description: Python 3 bluetooth interface
